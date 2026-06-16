@@ -404,6 +404,12 @@ export default function Filhos() {
 								<Text style={{ fontSize: 15, fontWeight: '700', color: '#1A1A1A', marginBottom: 16 }}>Ações rápidas</Text>
 								<View style={{ flexDirection: 'row', gap: 12 }}>
 									<AcaoRapida
+										icone={<Image source={filhoIcon} alt="Filho" />}
+										titulo="+ Cadastrar Filho" sub="Cadastre um novo filho"
+										cor="#ffffff" corTexto="#F7B500" borderColor='#EAEAEA'
+										onPress={() => setModalCadastro(true)}
+									/>
+									<AcaoRapida
 										icone={<Image source={examesIcon} alt="Exames" />} titulo="Adicionar exame" sub="Solicitar novo exame"
 										cor="#EAF4FF" corTexto="#1A73E8"
 										onPress={() => setModalExame(true)}
@@ -668,11 +674,11 @@ function FormFilho({ fNome, setFNome, fDataNasc, setFDataNasc, fAltura, setFAltu
 }
 
 //  Ação rápida 
-function AcaoRapida({ icone, titulo, sub, cor, corTexto, onPress }: any) {
+function AcaoRapida({ icone, titulo, sub, cor, corTexto, borderColor, onPress }: any) {
 	return (
 		<TouchableOpacity onPress={onPress} style={{
 			flex: 1, backgroundColor: cor, borderRadius: 12,
-			padding: 16, alignItems: 'flex-start',
+			padding: 16, alignItems: 'flex-start', borderColor: borderColor ?? '#eaeaea00',
 		}}>
 			<View style={{ marginBottom: 8 }}>{icone}</View>
 			<Text style={{ fontSize: 13, fontWeight: '700', color: corTexto }}>{titulo}</Text>
