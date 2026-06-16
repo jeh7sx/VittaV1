@@ -194,7 +194,7 @@ export default function Login() {
               </Text>
 
               <TouchableOpacity
-                onPress={() => router.push('/cadastro')}
+                onPress={() => router.push('/register')}
                 activeOpacity={0.7}
               >
                 <Text style={styles.footerLink}>
