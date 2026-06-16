@@ -405,7 +405,7 @@ export default function Filhos() {
 								<View style={{ flexDirection: 'row', gap: 12 }}>
 									<AcaoRapida
 										icone={<Image source={filhoIcon} alt="Filho" />}
-										titulo="+ Cadastrar Filho" sub="Cadastre um novo filho"
+										titulo="Cadastrar Filho" sub="Cadastre um novo filho"
 										cor="#ffffff" corTexto="#F7B500" borderColor='#EAEAEA'
 										onPress={() => setModalCadastro(true)}
 									/>
