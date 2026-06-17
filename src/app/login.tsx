@@ -71,7 +71,7 @@ export default function Login() {
 
       Alert.alert('Sucesso', 'Login realizado.');
 
-      router.replace('/visaoGeral');
+      router.replace('/home');
 
       await registrarLog(
         auth.currentUser?.uid || '',
